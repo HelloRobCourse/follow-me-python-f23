@@ -3,7 +3,7 @@ import numpy as np
 from mbot_bridge.api import MBot
 
 
-def findMinDist(ranges, thetas):
+def find_min_dist(ranges, thetas):
     """Finds the length and angle of the minimum ray in the scan.
 
     Make sure you ignore any rays with length 0! Those are invalid.
@@ -31,7 +31,7 @@ try:
         ranges, thetas = robot.read_lidar()
 
         # Get the distance and angle to the wall.
-        dist_to_wall, angle_to_wall = findMinDist(ranges, thetas)
+        dist_to_wall, angle_to_wall = find_min_dist(ranges, thetas)
 
         # TODO: Implement the 2D Follow Me controller
         # Hint: Look at your code from follow_1D

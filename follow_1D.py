@@ -3,7 +3,7 @@ import numpy as np
 from mbot_bridge.api import MBot
 
 # Get distance to wall
-def findFwdDist(ranges, thetas, window=5):
+def find_fwd_dist(ranges, thetas, window=5):
     """Find the distance to the nearest object in front of the robot.
 
     Args:
@@ -38,7 +38,7 @@ try:
         ranges, thetas = robot.read_lidar()
 
         # Get the distance to the wall in front of the robot.
-        dist_to_wall = findFwdDist(ranges, thetas)
+        dist_to_wall = find_fwd_dist(ranges, thetas)
 
         # TODO: Implement the follow me controller to drive the robot based on
         # the distance to the wall in front.
